@@ -1,0 +1,14 @@
+{
+  "name": "relay-ai-support-copilot",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Relay \u2014 production-style AI customer support copilot portfolio project",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
