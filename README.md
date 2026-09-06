@@ -186,4 +186,12 @@ Start command: npm start
 Node version: 18+
 ```
 
+### GitHub Pages
+
+GitHub Pages can publish the `public/` folder through the included `.github/workflows/pages.yml` workflow. In the repository settings, open **Pages**, choose **GitHub Actions** as the source, and push to `main` (or run the workflow manually). The published URL will load the frontend at the correct site root even though the source `index.html` remains inside `public/`.
+
+GitHub Pages is static hosting: it cannot run `server.js`, the `/api/*` routes, streamed draft generation, or `data/runtime.json` persistence. The Pages version is therefore a visual/static preview and will show the loading error when it tries to call the API.
+
+For the fully working project, deploy the repository to a Node host such as Render. The included `render.yaml` uses `npm start` automatically. The resulting Render URL is the working application URL; GitHub Pages can still be used for the static portfolio preview.
+
 For a real multi-user deployment, replace `data/runtime.json` with a database and add authentication before exposing the app publicly.
