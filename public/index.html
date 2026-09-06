@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
@@ -8,32 +9,48 @@
   <title>Relay — AI Support Workspace</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
   <div class="app-shell" id="appShell">
     <aside class="rail" aria-label="Primary navigation">
       <button class="brand" data-nav="inbox" aria-label="Relay inbox"><span class="brand-mark">R</span></button>
       <nav class="rail-nav" aria-label="Workspace">
-        <button class="rail-btn active" data-nav="inbox" aria-label="Inbox"><span data-icon="inbox"></span><span class="rail-label">Inbox</span><i class="rail-badge" id="railOpenCount">0</i></button>
-        <button class="rail-btn" data-nav="analytics" aria-label="Analytics"><span data-icon="chart"></span><span class="rail-label">Analytics</span></button>
-        <button class="rail-btn" data-nav="knowledge" aria-label="Knowledge"><span data-icon="book"></span><span class="rail-label">Knowledge</span></button>
-        <button class="rail-btn" data-nav="customers" aria-label="Customers"><span data-icon="users"></span><span class="rail-label">Customers</span></button>
+        <button class="rail-btn active" data-nav="inbox" aria-label="Inbox"><span data-icon="inbox"></span><span
+            class="rail-label">Inbox</span><i class="rail-badge" id="railOpenCount">0</i></button>
+        <button class="rail-btn" data-nav="analytics" aria-label="Analytics"><span data-icon="chart"></span><span
+            class="rail-label">Analytics</span></button>
+        <button class="rail-btn" data-nav="knowledge" aria-label="Knowledge"><span data-icon="book"></span><span
+            class="rail-label">Knowledge</span></button>
+        <button class="rail-btn" data-nav="customers" aria-label="Customers"><span data-icon="users"></span><span
+            class="rail-label">Customers</span></button>
       </nav>
       <div class="rail-spacer"></div>
-      <button class="rail-btn" data-action="command" aria-label="Command palette"><span data-icon="search"></span><span class="rail-label">Search</span><kbd>⌘K</kbd></button>
-      <button class="rail-btn notification-btn" data-action="notifications" aria-label="Notifications"><span data-icon="bell"></span><span class="rail-label">Updates</span><i class="notification-dot" id="notificationDot"></i></button>
-      <button class="agent-button" data-action="profile-menu" aria-label="Agent profile"><span class="agent-avatar">MO</span><span class="agent-copy"><strong>Marvellous O.</strong><small>Support lead</small></span><span data-icon="chevronDown"></span></button>
+      <button class="rail-btn" data-action="command" aria-label="Command palette"><span data-icon="search"></span><span
+          class="rail-label">Search</span><kbd>⌘K</kbd></button>
+      <button class="rail-btn notification-btn" data-action="notifications" aria-label="Notifications"><span
+          data-icon="bell"></span><span class="rail-label">Updates</span><i class="notification-dot"
+          id="notificationDot"></i></button>
+      <button class="agent-button" data-action="profile-menu" aria-label="Agent profile"><span
+          class="agent-avatar">MO</span><span class="agent-copy"><strong>Marvellous O.</strong><small>Support
+            lead</small></span><span data-icon="chevronDown"></span></button>
     </aside>
 
     <section class="inbox-panel" id="inboxPanel">
       <header class="inbox-head">
-        <div><span class="eyebrow">Support workspace</span><h1>Inbox</h1></div>
-        <button class="icon-button primary-icon" data-action="new-ticket" aria-label="Create ticket"><span data-icon="plus"></span></button>
+        <div><span class="eyebrow">Support workspace</span>
+          <h1>Inbox</h1>
+        </div>
+        <button class="icon-button primary-icon" data-action="new-ticket" aria-label="Create ticket"><span
+            data-icon="plus"></span></button>
       </header>
       <div class="inbox-controls">
-        <label class="search-field"><span data-icon="search"></span><input id="ticketSearch" placeholder="Search tickets or customers" autocomplete="off" /><kbd>/</kbd></label>
+        <label class="search-field"><span data-icon="search"></span><input id="ticketSearch"
+            placeholder="Search tickets or customers" autocomplete="off" /><kbd>/</kbd></label>
         <div class="queue-tabs" role="tablist">
           <button class="queue-tab active" data-queue="open">Open <span id="openCount">0</span></button>
           <button class="queue-tab" data-queue="pending">Pending <span id="pendingCount">0</span></button>
@@ -41,8 +58,10 @@
           <button class="queue-tab" data-queue="all">All</button>
         </div>
         <div class="ticket-toolbar">
-          <button class="toolbar-btn" data-action="filter"><span data-icon="filter"></span><span id="filterLabel">Filter</span></button>
-          <button class="toolbar-btn" data-action="sort"><span data-icon="sort"></span><span id="sortLabel">Newest</span></button>
+          <button class="toolbar-btn" data-action="filter"><span data-icon="filter"></span><span
+              id="filterLabel">Filter</span></button>
+          <button class="toolbar-btn" data-action="sort"><span data-icon="sort"></span><span
+              id="sortLabel">Newest</span></button>
           <div class="toolbar-spacer"></div>
           <span class="ticket-total" id="ticketTotal">0 tickets</span>
         </div>
@@ -54,8 +73,10 @@
       <div class="workspace-empty">
         <div class="empty-symbol"><span data-icon="sparkles"></span></div>
         <h2>Pick up where the customer left off.</h2>
-        <p>Select a conversation to see the full thread, customer history, retrieved knowledge and a reviewable AI response in one workspace.</p>
-        <div class="empty-shortcuts"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>G</kbd> generate</span><span><kbd>E</kbd> edit draft</span></div>
+        <p>Select a conversation to see the full thread, customer history, retrieved knowledge and a reviewable AI
+          response in one workspace.</p>
+        <div class="empty-shortcuts"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>G</kbd>
+            generate</span><span><kbd>E</kbd> edit draft</span></div>
       </div>
     </main>
   </div>
@@ -71,4 +92,5 @@
 
   <script type="module" src="./app.js"></script>
 </body>
+
 </html>
